@@ -1,3 +1,5 @@
+import React from "react"
+
 const HEAD = (
     <div style={{
         width: "50px",

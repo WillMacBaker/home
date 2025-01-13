@@ -1,4 +1,5 @@
-import styles from './Keyboard.module.css'
+import React from 'react'
+import styles from "./Keyboard.module.css" 
 
 const KEYS = [
     "a",
@@ -30,12 +31,18 @@ const KEYS = [
 ]
 
 type KeyboardProps = {
+    disabled?: boolean
     activeLetters: string[]
     inactiveLetters: string[]
     addGuessedLetter: (letter: string) => void
 }
 
-export function Keyboard({ activeLetters, inactiveLetters, addGuessedLetter}: KeyboardProps) {
+export function Keyboard({
+    disabled = false,
+    activeLetters, 
+    inactiveLetters, 
+    addGuessedLetter
+}: KeyboardProps) {
     return (
     <div 
         style={{
@@ -57,7 +64,7 @@ export function Keyboard({ activeLetters, inactiveLetters, addGuessedLetter}: Ke
                     ${
                         isInactive ? styles.inactive : ""
                     }`}
-                    disabled={isInactive || isActive}
+                    disabled={isInactive || isActive || disabled}
                     key={key}
                 >
                     {key}
