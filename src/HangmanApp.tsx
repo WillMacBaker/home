@@ -1,11 +1,10 @@
-import { useCallback, useEffect, useState } from "react"
+/*import { useCallback, useEffect, useState } from "react"
 import words from "./wordList.json"
 import styled from 'styled-components'
 import { HangmanDrawing } from "./HangmanDrawing"
 import { HangmanWord } from "./HangmanWord"
 import { Keyboard } from "./Keyboard"
 import React from "react"
-import { BODY_PARTS } from "./HangmanDrawing"
 
 
 function getWord() {
@@ -19,7 +18,7 @@ function App() {
     letter => !wordToGuess.includes(letter)
   )
 
-  const isLoser = inCorrectLetters.length >= BODY_PARTS.length
+  const isLoser = inCorrectLetters.length >= 6
   // .every returns true only if every iteration of loop contained returns true
   const isWinner = wordToGuess
   .split("")
@@ -100,3 +99,4 @@ function App() {
 
 export default App
 
+*/
