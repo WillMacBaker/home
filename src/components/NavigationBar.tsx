@@ -1,5 +1,12 @@
+import * as React from 'react';
+import styled from 'styled-components';
+
+
+
+
+
 export default function NavigationBar() {
     return(
-        <h1>Nav Bar</h1>
+      <h2>This is the navbar section</h2>
     )
 }
