@@ -1,5 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import portrait from '../assets/images/definitelyMe.jpeg'
+
+
 
 const StyledButton = styled.button<{$color?: string}>`
     background-color: ${({$color}) => $color || "purple"};
@@ -11,9 +14,9 @@ const StyledButton = styled.button<{$color?: string}>`
 `
 
 interface IJumbotron{
-    name: string
-    age: number
-    job: string
+    name?: string
+    age?: number
+    job?: string
     buttonColor?: string
     colorScheme?: boolean
 }
@@ -33,7 +36,7 @@ export const JumboTron = ({name, age, job}: IJumbotron) => {
                     </div> 
                 </article>
                 <figure className="portrait">
-                    <p>Tasteful portrait to go here</p>
+                    {/* ADD IMG TAG HERE, NEED TO FIGURE OUT INLINE STYLING OF ELEMENT*/}
                 </figure>   
             </div>
             <div className="jumboTronBottomSection">
