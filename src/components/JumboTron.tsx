@@ -1,16 +1,13 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-
-
-
-
 const StyledButton = styled.button<{$color?: string}>`
     background-color: ${({$color}) => $color || "purple"};
+    cursor: pointer;
     border-radius: 0%;
     text-align: center;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 `
 
 interface IJumbotron{
@@ -18,23 +15,40 @@ interface IJumbotron{
     age: number
     job: string
     buttonColor?: string
+    colorScheme?: boolean
 }
 
-export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
+export const JumboTron = ({name, age, job}: IJumbotron) => {
     return(
-        <section>
-            <p>START OF JUMBOTRON</p>
-            <div>
-                <div>
-                    <h1>Hi, I'm {name || "ERROR"}! I am {age} years old 
-                    <br/>I'm a {job}?
-                    <br/><StyledButton $color={buttonColor}/>
-                    </h1>
+        <section className="jumboTronContainer">
+            <div className="jumboTronTopSection">
+                <article className="pageHeader">
                     <div>
-                    </div>
-                </div>
+                        <h1 aria-label="Hi I'm ${Will}.">
+                            Hi! I'm Will.
+                        </h1>
+                        <h2>
+                            I like to make React Projects and other fun things!
+                        </h2>
+                    </div> 
+                </article>
+                <figure className="portrait">
+                    <p>Tasteful portrait to go here</p>
+                </figure>   
             </div>
-            <p>END OF JUMBOTRON</p>
+            <div className="jumboTronBottomSection">
+                <div>
+                <ul className="pageHeaderSubHighlights">    
+                        <li>
+                            I'm currently working on my JavaScript and React Library skills
+                        </li>
+                        <li>
+                            I'm also working on my styling and page design abilities!
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
         </section>
     )
 }

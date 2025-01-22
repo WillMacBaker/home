@@ -1,0 +1,77 @@
+* {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* 
+colour style hex codes
+#EBD400 - Orangey-yellow
+#492BAB - Purple
+*/
+
+.app {
+    position: fixed;
+    min-width: 200vh;
+    min-height: 100%;
+}
+
+.footer {
+    display: flex;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.jumboTronContainer {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+}
+
+.jumboTronTopSection {
+    background-image: url("./assets/backgrounds/bright-squares.png");
+    flex: 1;
+    background-color: #492BAB;
+    color: #EBD400;
+}
+
+.jumboTronBottomSection {
+    flex: 1;
+    background-color: #EBD400;
+    color: #492BAB;
+}
+
+
+
+.jumboTronTopSection h1,h2,ul {
+    padding: 20px;
+}
+
+
+.jumboTronTopSection h2 {
+    font-size: 28px;
+    padding: 0px 20px 20px 20px;
+}
+
+.jumboTronTopSection ul {
+    list-style-type: none;
+}
+
+.pageHeaderSubHighlights li {
+    padding: 0 20px 20px 0;
+}
+
+.portrait {
+    width: inherit;
+    display: block;
+    height: inherit;
+    margin-top: -2.435em;
+    background-size: cover;
+    background-image: url("./assets/backgrounds/inspiration-geometry.png");
+}
+
+.pageHeader {
+    text-align: left;
+    position: relative;
+    font-size: 48px;
+}
