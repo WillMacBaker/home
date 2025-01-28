@@ -8,28 +8,20 @@ colour style hex codes
 #492BAB - Purple
 */
 
-.app {
-    position: fixed;
-    min-width: 200vh;
-    min-height: 100%;
-}
 
-.footer {
-    display: flex;
-    padding: 0;
-    border: 0;
-    margin: 0;
-}
+/* PAGE HEADER CSS STYLING*/
+
 
 .jumboTronContainer {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50vw;
+    max-width: 1200px;
+    justify-self: center;
 }
 
 .jumboTronTopSection {
+    display: inline-flex;
+    flex-direction: row;
     background-image: url("./assets/backgrounds/bright-squares.png");
     background-color: #492BAB;
     color: #EBD400;;
@@ -40,10 +32,11 @@ colour style hex codes
     color: #492BAB;
 }
 
-.portrait {
-    padding: 20px;
-    display: inline-flex
+.jumboTronTopSection div {
+    display: flex;
+    flex-direction: column;
 }
+
 
 .jumboTronTopSection h1,h2,ul {
     padding: 20px;
@@ -64,4 +57,42 @@ colour style hex codes
     text-align: left;
     position: relative;
     font-size: 48px;
+}
+
+.portraitContainer {
+
+}
+
+.portraitContainer figure {
+    display: flex;
+    background-color:#EBD400;;
+    width: 40vh;
+    padding: 20px;
+}
+
+.portrait {
+    height: auto;
+    width: 100%;
+}
+
+
+/* PROJECT PANE CSS STYLING*/
+
+
+
+
+/* NAVBAR AND FOOTER STYLING*/
+
+.footer {
+    display: flex;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-image: url("./assets/backgrounds/bright-squares.png");
+    background-color: #492BAB;
+}
+
+.navbar {
+    background-image: url("./assets/backgrounds/bright-squares.png");
+    background-color: #492BAB;
 }

@@ -6,7 +6,7 @@ import {JumboTron} from "./components/JumboTron"
 
 import Contact from "./components/Contact"
 import NavigationBar from "./components/NavigationBar"
-import Projects from "./components/Projects"
+import { ProjectSection } from "./components/ProjectSection"
 import Skills from "./components/Skills"
 import Footer from "./components/Footer"
 
@@ -16,11 +16,13 @@ export default function App() {
     <main >
       <div className="mainPageContent">
         {/* Nav bar will sit at top of page*/}
-        <NavigationBar />
-        <JumboTron name="Will" age={27} job="developer?" />
-        <Projects />
-        <Skills />
-        <Contact />
+        <div className="navbar">
+          {/* <NavigationBar /> */}
+        </div>
+        <JumboTron name="Will" age={27} job="developer?" buttonColor="red"/>
+        <ProjectSection />
+        {/* <Skills />
+        <Contact /> */}
       </div>
       <div className="footer">
         <Footer /> 
