@@ -113,7 +113,6 @@ colour style hex codes
 }
 
 .individualPaneDiv {
-    display: flex;
 }
 
 .paneImage {
@@ -122,9 +121,6 @@ colour style hex codes
     object-fit: contain;
 }
 
-.paneImage:hover {
-    visibility: hidden;
-}
 
 .paneTitle {
 

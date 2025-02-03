@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { ProjectPane } from './ProjectPane';
 import { projects } from './data/data';
+import { motion } from 'motion/react';
 
 interface IProjects{
     //projectArray: Array[]
@@ -25,7 +26,9 @@ export const ProjectSection = () => {
                     href={project.link}
                     key={project.image}
                     className='projectPane'>
-                        <div className="individualPaneDiv">
+                        <motion.div className="individualPaneDiv" 
+                            whileHover={{scale: 1.05}}
+                            whileTap={{scale: 1.00}}>
                             <img
                             alt="gallery"
                             className="paneImage"
@@ -40,7 +43,7 @@ export const ProjectSection = () => {
                                 </h2>
                                 <p className='paneDescription'>{project.description}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     </a>
                 ))}
             </div>

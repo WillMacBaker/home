@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import portrait from '../assets/images/definitelyMe.jpeg'
+import { motion } from 'motion/react';
 
 
 
@@ -27,7 +28,9 @@ export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
         <section className="jumboTronContainer">
             <div className="jumboTronTopSection">
                 <div>
-                    <article className="pageHeader">
+                    <motion.article className="pageHeader"
+                    initial={{opacity: "0%"}}
+                    animate={{opacity:"100%"}}>
                         <div>
                             <h1>
                                 Hi! I'm {name}.
@@ -36,9 +39,11 @@ export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
                                 I like to make React Projects and other fun things!
                             </h2>
                         </div> 
-                    </article>
+                    </motion.article>
                 </div>
-                <div className="portraitContainer">
+                <motion.div className="portraitContainer"
+                initial={{opacity: "0%"}}
+                animate={{opacity:"100%"}}>
                     {/* Todo: to replace this figure and img with a generic image component, that
                         can take parameters to define basic styling, like width, height...
                         Currently handled in bootleg way via standard index.css
@@ -46,7 +51,7 @@ export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
                     <figure >
                         <img className="portrait" src="./src/assets/images/definitelyMe.jpeg"></img>
                     </figure>
-                </div>  
+                </motion.div>  
             </div>
             <div className="jumboTronBottomSection">
                 <div>
