@@ -27,7 +27,6 @@ export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
         <section className="jumboTronContainer">
             <div className="jumboTronTopSection">
                 <div>
-                    <StyledButton $color={buttonColor}/>
                     <article className="pageHeader">
                         <div>
                             <h1>

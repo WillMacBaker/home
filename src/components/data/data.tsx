@@ -7,15 +7,15 @@
 export const projects  = [
     {
         title: "My FreeCodeCamp Portfolio",
-        subtitle: "",
+        subtitle: "What have I submitted to the site recently?",
         description: 
             "See how I'm getting along on FreeCodeCamp",
-        image: "",
+        image: "src/assets/images/FreeCodeCamp_logo.png",
         link: "https://www.freecodecamp.org/willmacbaker"
     },
     {
         title: "Basic Pokemon API JS",
-        subtitle: "",
+        subtitle: "subtitle",
         description: 
             "Search the database of original pokemon here!",
         image: "src/assets/images/FreeCodeCamp_logo.png",

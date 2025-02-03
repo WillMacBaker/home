@@ -17,7 +17,7 @@ export const ProjectSection = () => {
     return(
         <>
         <section className='projectPaneSection'>
-            <div className='projectSectionHeader'>
+            <div className='prePaneHeader'>
             </div>
             <div className='paneContainer'>
                 {projects.map((project) => (
@@ -25,19 +25,20 @@ export const ProjectSection = () => {
                     href={project.link}
                     key={project.image}
                     className='projectPane'>
-                        <div>
+                        <div className="individualPaneDiv">
                             <img
                             alt="gallery"
+                            className="paneImage"
                             src={project.image}
                             />
                             <div>
-                                <h1>
+                                <h1 className="paneTitle">
                                     {project.title}
                                 </h1>
-                                <h2>
+                                <h2 className="paneSubtitle">
                                     {project.subtitle}
                                 </h2>
-                                <p>{project.description}</p>
+                                <p className='paneDescription'>{project.description}</p>
                             </div>
                         </div>
                     </a>
