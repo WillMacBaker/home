@@ -18,7 +18,14 @@ export const projects  = [
         subtitle: "subtitle",
         description: 
             "Search the database of original pokemon here!",
-        image: "src/assets/images/FreeCodeCamp_logo.png",
+        image: "",
         link: "https://willmacbaker.github.io/JSPortfolio/pokemonSearch/pokemon.html"
+    },
+    {
+        title: "Gif Search Tool",
+        subtitle: "Search for a GIF, any GIF!",
+        description: "Hooked up to the GIPHY API, this basic page application can query GIPHY with user-chosen search queries",
+        image: "",
+        link: "https://willmacbaker.github.io/giphy-technical-challenge/"
     }
 ]
