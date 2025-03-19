@@ -5,6 +5,38 @@ import { motion } from 'motion/react';
 
 
 
+const StyledSection = styled(motion.section)`
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    justify-self: center;
+`
+
+const PortraitContainer = styled(motion.div)`
+
+`
+
+const PortraitContainerFigure = styled(motion.figure)`
+    display: flex;
+    background-color:purple;
+    width: 40vh;
+    padding: 20px;
+`
+
+const StyledImageContainer = styled(motion.img)`
+    height: auto;
+    width: 100%;
+`
+
+const JumboTronTopSection = styled(motion.div)`
+    display: inline-flex;
+    flex-direction: row;
+    // UPDATE BACKGROUND IMAGE REFERENCE, MAYBE CHANGE TO PATTERN INSTEAD
+    background-image: repeating-linear-gradient(100deg, #d8f7fb,#d8f7fb 20vw,#ffffff 20vw,#ffffff 40vw,#f2ebc6 40vw,#f2ebc6 60vw,#ffffff 60vw,#ffffff 80vw,#cbf9df 80vw,#cbf9df 100vw,#ffffff 100vw,#ffffff 120vw);
+    background-color: var(--purple);
+    color: var(--yellow);
+`
+
 const StyledButton = styled.button<{$color?: string}>`
     background-color: ${({$color}) => $color || "purple"};
     cursor: pointer;
@@ -25,8 +57,8 @@ interface IJumbotron{
 
 export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
     return(
-        <section className="jumboTronContainer">
-            <div className="jumboTronTopSection">
+        <StyledSection className="jumboTronContainer">
+            <JumboTronTopSection className="jumboTronTopSection">
                 <div>
                     <motion.article className="pageHeader"
                     initial={{opacity: "0%"}}
@@ -41,18 +73,18 @@ export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
                         </div> 
                     </motion.article>
                 </div>
-                <motion.div className="portraitContainer"
+                <PortraitContainer className="portraitContainer"
                 initial={{opacity: "0%"}}
                 animate={{opacity:"100%"}}>
                     {/* Todo: to replace this figure and img with a generic image component, that
                         can take parameters to define basic styling, like width, height...
                         Currently handled in bootleg way via standard index.css
                         */}
-                    <figure >
-                        <img className="portrait" src="./src/assets/images/definitelyMe.jpeg"></img>
-                    </figure>
-                </motion.div>  
-            </div>
+                    <PortraitContainerFigure>
+                        <StyledImageContainer className="portrait" src="./src/assets/images/definitelyMe.jpeg"></StyledImageContainer>
+                    </PortraitContainerFigure>
+                </PortraitContainer>  
+            </JumboTronTopSection>
             <div className="jumboTronBottomSection">
                 <div>
                     <ul className="pageHeaderSubHighlights">
@@ -65,6 +97,6 @@ export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
                     </ul>
                 </div>
             </div>
-        </section>
+        </StyledSection>
     )
 }

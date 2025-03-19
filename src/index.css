@@ -12,6 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
+  background-image: repeating-linear-gradient(135deg, #d8f7fb,#d8f7fb 20vw,#ffffff 20vw,#ffffff 40vw,#f2ebc6 40vw,#f2ebc6 60vw,#ffffff 60vw,#ffffff 80vw,#cbf9df 80vw,#cbf9df 100vw,#ffffff 100vw,#ffffff 120vw);
   /* background-image: radial-gradient(black 5%, white 0%); */
   /* background-size: 5% 10%; */
 }
@@ -27,10 +28,7 @@ code {
 /* MOVE ALL THE BELOW CODE INTO THEIR OWN STYLED COMPONENTS*/
 
 .jumboTronContainer {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    justify-self: center;
+    
 }
 
 .jumboTronTopSection {
@@ -71,18 +69,6 @@ code {
     text-align: left;
     position: relative;
     font-size: 48px;
-}
-
-.portraitContainer figure {
-    display: flex;
-    background-color:#EBD400;;
-    width: 40vh;
-    padding: 20px;
-}
-
-.portrait {
-    height: auto;
-    width: 100%;
 }
 
 
