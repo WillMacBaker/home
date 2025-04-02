@@ -25,7 +25,7 @@ export const projects  = [
         title: "Gif Search Tool",
         subtitle: "Search for a GIF, any GIF!",
         description: "Hooked up to the GIPHY API, this basic page application can query GIPHY with user-chosen search queries",
-        image: "",
+        image: "src/assets/images/giphyProjectImage.png",
         link: "https://willmacbaker.github.io/giphy-technical-challenge/"
     }
 ]

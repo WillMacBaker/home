@@ -13,33 +13,33 @@ const StyledSection = styled(motion.section)`
 `
 
 const PortraitContainer = styled(motion.div)`
-
+    //background-color: red;
 `
 
 const PortraitContainerFigure = styled(motion.figure)`
     display: flex;
-    background-color:purple;
     width: 40vh;
     padding: 20px;
+    
 `
 
 const StyledImageContainer = styled(motion.img)`
     height: auto;
     width: 100%;
+    box-shadow: 5px 5px 0 #000, 10px 10px 0 #ee82ee;
 `
 
 const JumboTronTopSection = styled(motion.div)`
     display: inline-flex;
     flex-direction: row;
     // UPDATE BACKGROUND IMAGE REFERENCE, MAYBE CHANGE TO PATTERN INSTEAD
-    background-image: repeating-linear-gradient(30deg, #d8f7fb,#d8f7fb 20vw,#ffffff 20vw,#ffffff 40vw,#f2ebc6 40vw,#f2ebc6 60vw,#ffffff 60vw,#ffffff 80vw,#cbf9df 80vw,#cbf9df 100vw,#ffffff 100vw,#ffffff 120vw);
+
     //background-color: var(--purple);
     color: var(--yellow);
 `
 const JumboTronContentDiv = styled(motion.div)`
     display: flex;
     flex-direction: column;
-    //background-color: red;
 `
 
 const JumboTronBottomSection = styled(motion.div)`
