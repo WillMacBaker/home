@@ -11,7 +11,8 @@ export const projects  = [
         description: 
             "See how I'm getting along on FreeCodeCamp",
         image: "src/assets/images/FreeCodeCamp_logo.png",
-        link: "https://www.freecodecamp.org/willmacbaker"
+        link: "https://www.freecodecamp.org/willmacbaker",
+        boxShadow: 'purple'
     },
     {
         title: "Basic Pokemon API JS",
@@ -19,13 +20,15 @@ export const projects  = [
         description: 
             "Search the database of original pokemon here!",
         image: "",
-        link: "https://willmacbaker.github.io/JSPortfolio/pokemonSearch/pokemon.html"
+        link: "https://willmacbaker.github.io/JSPortfolio/pokemonSearch/pokemon.html",
+        boxShadow: '',
     },
     {
         title: "Gif Search Tool",
         subtitle: "Search for a GIF, any GIF!",
         description: "Hooked up to the GIPHY API, this basic page application can query GIPHY with user-chosen search queries",
         image: "src/assets/images/giphyProjectImage.png",
-        link: "https://willmacbaker.github.io/giphy-technical-challenge/"
+        link: "https://willmacbaker.github.io/giphy-technical-challenge/",
+        boxShadow: '#4a90e2',
     }
 ]

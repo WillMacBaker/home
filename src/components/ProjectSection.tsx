@@ -11,18 +11,27 @@ const ProjectItemParentDiv = styled.div`
     max-width:  90%;
     margin-top: 2rem;
     justify-self: center;
-    background-color: beige;
-
+    //background-color: beige;
 `
 
-const ProjectItemDiv = styled(motion.div)`
+const ProjectItemDiv = styled(motion.div)<{boxShadowInput: string}>`
     cursor: pointer;
     width: inherit;
     max-width: 400px;
     max-height: 500px;
     max-width: auto;
     margin: 1rem;
-    box-shadow: 5px 5px 0 #000, 10px 10px 0 #ee82ee;
+    background-color: white;
+    // add function here to set box-shadow to a colour added to data file!
+    box-shadow: 5px 5px 0 #000, 10px 10px 0 ${({boxShadowInput}) => {
+        // Bit verbose, but works
+        if (boxShadowInput){
+            return boxShadowInput
+        } else {
+            return '#ee82ee'
+        }
+        }
+    };
 `
 const ProjectItemImageDiv = styled(motion.div)`
     z-index: 9;
@@ -36,7 +45,8 @@ const ProjectItemImage = styled(motion.img)`
 const ProjectItemInfoDiv = styled(motion.div)`
     width: 100%;
     height: 100%;
-    z-index: 10;
+    //position: fixed;
+    z-index: 12;
     background-color: green;
     opacity: 0;
 `
@@ -58,8 +68,13 @@ export const ProjectSection = () => {
                     key={project.image}
                     className='projectPane'>
                         <ProjectItemDiv className={project.title}
-                            whileHover={{scale: 1.05}}
-                            whileTap={{scale: 1.00}}>
+                            whileHover={{scale: 1.02}}
+                            whileTap={{scale: 1.00}}
+                            boxShadowInput={project.boxShadow}
+                            // ADD CODE HERE TO PASS A BOXSHADOW ARG TO STYLED
+                            // COMPONENT ABOVE.
+                            
+                            >
                             
                             <ProjectItemImageDiv>
                                 <ProjectItemImage
@@ -71,7 +86,6 @@ export const ProjectSection = () => {
                             <ProjectItemInfoDiv
                                 whileHover={{
                                     opacity: 1,
-                                    zIndex: 10,
                                     transition: {duration : 0.1}
                                 }}
                             >
