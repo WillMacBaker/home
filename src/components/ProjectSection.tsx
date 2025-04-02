@@ -17,6 +17,7 @@ const ProjectItemParentDiv = styled.div`
 const ProjectItemDiv = styled(motion.div)<{boxShadowInput: string}>`
     cursor: pointer;
     width: inherit;
+    position: relative;
     max-width: 400px;
     max-height: 500px;
     max-width: auto;
@@ -33,24 +34,43 @@ const ProjectItemDiv = styled(motion.div)<{boxShadowInput: string}>`
         }
     };
 `
-const ProjectItemImageDiv = styled(motion.div)`
-    z-index: 9;
-`
 
-const ProjectItemImage = styled(motion.img)`
+const ProjectItemImageDiv = styled(motion.div)`
     width: 100%;
+    height: 100%;
+    //position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
     max-width: inherit;
 `
 
 const ProjectItemInfoDiv = styled(motion.div)`
     width: 100%;
     height: 100%;
-    //position: fixed;
-    z-index: 12;
-    background-color: green;
-    opacity: 0;
+    position: absolute;
+    max-width: inherit;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    color: white;
+    background-color: ORANGE;
+    text-align: center;
+`
+const ProjectItemImage = styled(motion.img)`
+     size: auto;
+`
+const StyledH2 = styled.h2`
+    
 `
 
+const StyledH3 = styled.h3`
+    
+`
+
+const StyledText = styled.p`
+    
+`
 
 /* For now, can manually add in panes with content and links, better future approach would be an array of objects,
     with each object containing a link, image(?) and text to show*/
@@ -89,13 +109,15 @@ export const ProjectSection = () => {
                                     transition: {duration : 0.1}
                                 }}
                             >
-                                <h2 className="paneTitle">
+                                <h2>
                                     {project.title}
                                 </h2>
-                                <h3 className="paneSubtitle">
+                                <h3>
                                     {project.subtitle}
                                 </h3>
-                                <p className='paneDescription'>{project.description}</p>
+                                <p>
+                                    {project.description}
+                                </p>
                             </ProjectItemInfoDiv>
                         </ProjectItemDiv>
                     </a>
