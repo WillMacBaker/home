@@ -1,6 +1,7 @@
 :root {
     --yellow: #EBD400;
     --purple: #492BAB;
+
 }
 
 
@@ -23,37 +24,12 @@ code {
 }
 
 
-/* PAGE HEADER CSS STYLING*/
-
 /* MOVE ALL THE BELOW CODE INTO THEIR OWN STYLED COMPONENTS*/
-
-.jumboTronContainer {
-    
-}
-
-.jumboTronTopSection {
-    display: inline-flex;
-    flex-direction: row;
-    background-image: url("./assets/backgrounds/bright-squares.png");
-    background-color: var(--purple);
-    color: var(--yellow);
-}
-
-.jumboTronBottomSection {
-    background-color: var(--yellow);
-    color: var(--purple);
-}
-
-.jumboTronTopSection div {
-    display: flex;
-    flex-direction: column;
-}
 
 
 .jumboTronTopSection h1,h2,ul {
     padding: 20px;
 }
-
 
 .jumboTronTopSection h2 {
     font-size: 28px;

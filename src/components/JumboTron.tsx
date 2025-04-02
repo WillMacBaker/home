@@ -32,9 +32,19 @@ const JumboTronTopSection = styled(motion.div)`
     display: inline-flex;
     flex-direction: row;
     // UPDATE BACKGROUND IMAGE REFERENCE, MAYBE CHANGE TO PATTERN INSTEAD
-    background-image: repeating-linear-gradient(100deg, #d8f7fb,#d8f7fb 20vw,#ffffff 20vw,#ffffff 40vw,#f2ebc6 40vw,#f2ebc6 60vw,#ffffff 60vw,#ffffff 80vw,#cbf9df 80vw,#cbf9df 100vw,#ffffff 100vw,#ffffff 120vw);
-    background-color: var(--purple);
+    background-image: repeating-linear-gradient(30deg, #d8f7fb,#d8f7fb 20vw,#ffffff 20vw,#ffffff 40vw,#f2ebc6 40vw,#f2ebc6 60vw,#ffffff 60vw,#ffffff 80vw,#cbf9df 80vw,#cbf9df 100vw,#ffffff 100vw,#ffffff 120vw);
+    //background-color: var(--purple);
     color: var(--yellow);
+`
+const JumboTronContentDiv = styled(motion.div)`
+    display: flex;
+    flex-direction: column;
+    //background-color: red;
+`
+
+const JumboTronBottomSection = styled(motion.div)`
+    //background-color: var(--yellow);
+    color: var(--purple);
 `
 
 const StyledButton = styled.button<{$color?: string}>`
@@ -59,7 +69,7 @@ export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
     return(
         <StyledSection className="jumboTronContainer">
             <JumboTronTopSection className="jumboTronTopSection">
-                <div>
+                <JumboTronContentDiv>
                     <motion.article className="pageHeader"
                     initial={{opacity: "0%"}}
                     animate={{opacity:"100%"}}>
@@ -72,7 +82,7 @@ export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
                             </h2>
                         </div> 
                     </motion.article>
-                </div>
+                </JumboTronContentDiv>
                 <PortraitContainer className="portraitContainer"
                 initial={{opacity: "0%"}}
                 animate={{opacity:"100%"}}>
@@ -85,7 +95,7 @@ export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
                     </PortraitContainerFigure>
                 </PortraitContainer>  
             </JumboTronTopSection>
-            <div className="jumboTronBottomSection">
+            <JumboTronBottomSection>
                 <div>
                     <ul className="pageHeaderSubHighlights">
                         <li>
@@ -96,7 +106,7 @@ export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
                         </li>
                     </ul>
                 </div>
-            </div>
+            </JumboTronBottomSection>
         </StyledSection>
     )
 }

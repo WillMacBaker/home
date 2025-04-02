@@ -29,7 +29,7 @@ export default function App() {
             <Contact /> */}
           </div>
           <div className="footer">
-            <Footer /> 
+            {/* <Footer />  */}
           </div>
         </main>
   )
