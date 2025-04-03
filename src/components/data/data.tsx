@@ -19,7 +19,7 @@ export const projects  = [
         subtitle: "subtitle",
         description: 
             "Search the database of original pokemon here!",
-        image: "",
+        image: "src/assets/images/placeholderPokemonApp.png",
         link: "https://willmacbaker.github.io/JSPortfolio/pokemonSearch/pokemon.html",
         boxShadow: '',
     },

@@ -13,8 +13,7 @@ const StyledSection = styled(motion.section)`
 `
 
 const PortraitContainer = styled(motion.div)`
-    
-    //background-color: red;
+    background-color: red;
 `
 
 const PortraitContainerFigure = styled(motion.figure)`
@@ -39,7 +38,6 @@ const PortraitContainerFigure = styled(motion.figure)`
 `
 
 const StyledImageContainer = styled(motion.img)`
-
     @media (min-width:768px) {
         max-width: 240px;
         max-height: 240px;

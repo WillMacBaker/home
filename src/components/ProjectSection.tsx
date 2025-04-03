@@ -46,13 +46,14 @@ const ProjectItemImageDiv = styled(motion.div)`
 `
 
 const ProjectItemInfoDiv = styled(motion.div)`
-    display: flex;
-    flex-direction: column;
+    display: block;
+    //flex-direction: column;
     opacity: 0;
+    max-width: inherit;
+    max-height: inherit;
     width: 100%;
     height: 100%;
     position: absolute;
-    max-width: inherit;
     top: 0;
     left: 0;
     z-index: 9;
