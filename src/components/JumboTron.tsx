@@ -13,19 +13,49 @@ const StyledSection = styled(motion.section)`
 `
 
 const PortraitContainer = styled(motion.div)`
+    
     //background-color: red;
 `
 
 const PortraitContainerFigure = styled(motion.figure)`
+    @media (min-width:768px) {
+        max-width: 240px;
+        max-height: 240px;
+    }
+
+    @media (min-width:992px) {
+        max-width: 314px;
+        max-height: 314px;
+    }
+
+    @media (min-width:1200px) {
+        max-width: 380px;
+        max-height: 380px;
+    }
     display: flex;
     width: 40vh;
     padding: 20px;
-    
+    background-color: yellow;
 `
 
 const StyledImageContainer = styled(motion.img)`
+
+    @media (min-width:768px) {
+        max-width: 240px;
+        max-height: 240px;
+    }
+
+    @media (min-width:992px) {
+        max-width: 314px;
+        max-height: 314px;
+    }
+
+    @media (min-width:1200px) {
+        max-width: 380px;
+        max-height: 380px;
+    }
     height: auto;
-    width: 100%;
+    //width: 100%;
     box-shadow: 5px 5px 0 #000, 10px 10px 0 #ee82ee;
 `
 

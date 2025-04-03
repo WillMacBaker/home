@@ -23,10 +23,12 @@ export default function App() {
             <div className="navbar">
               {/* <NavigationBar /> */}
             </div>
+            <div>
             <JumboTron name="Will" age={27} job="developer?" buttonColor="red"/>
             <ProjectSection />
             {/* <Skills />
             <Contact /> */}
+            </div>
           </div>
           <div className="footer">
             {/* <Footer />  */}
