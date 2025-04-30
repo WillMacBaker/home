@@ -8,17 +8,15 @@ const ProjectItemParentDiv = styled(motion.div)`
     display: flex;
     flex-wrap: wrap;
     max-width:  90%;
-    margin-top: 2rem;
-    justify-self: center;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    width: 75%;
     justify-content: center;
-    padding: 3rem;
-    margin: 1rem;
-    max-width: 75%;
+    align-items: center;
     font-family: monospace;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #000;
+    padding: 1rem;
     background-color: #fff;
     border: 4px solid #000;
     box-shadow: 5px 5px 0 #000, 4px 4px 0 #E8793F;
@@ -108,13 +106,19 @@ const StyledText = styled.p`
     font-style: italic;
 `
 
+const StyledSection = styled(motion.section)`
+    justify-content: center;
+    align-self: center;
+`
+
+
 /* For now, can manually add in panes with content and links, better future approach would be an array of objects,
     with each object containing a link, image(?) and text to show*/
 
 export const ProjectSection = () => {
     return(
         <>
-        <section className='projectPaneSection'>
+        <StyledSection className='projectPaneSection'>
             <div className='prePaneHeader'>
             </div>
             <ProjectItemParentDiv className='paneContainer'
@@ -173,7 +177,7 @@ export const ProjectSection = () => {
                 ))}
             </ProjectItemParentDiv>
 
-        </section>
+        </StyledSection>
         
 
         

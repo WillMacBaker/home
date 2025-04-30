@@ -17,7 +17,8 @@ import "./index.css"
 
 
 const AppContainer = styled(motion.div)`
-
+  justify-content: center;
+  align-items: center;
 `
 
 export default function App() { 

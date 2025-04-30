@@ -13,7 +13,7 @@ const StyledSection = styled(motion.section)`
     display: flex;
     flex-direction: column;
     max-width: 1200px;
-    justify-self: center;
+    margin: auto;
 `
 
 const PortraitContainer = styled(motion.div)`
@@ -63,6 +63,8 @@ const StyledImageContainer = styled(motion.img)`
 const JumboTronTopSection = styled(motion.div)`
     display: inline-flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     
 `
 const JumboTronContentDiv = styled(motion.div)`
