@@ -29,7 +29,7 @@ export default function App() {
               {/* <NavigationBar /> */}
             </div>
             <div>
-            <JumboTron name="Will"/>
+            <JumboTron />
             <ProjectSection />
             {/* <Skills />
             <Contact /> */}

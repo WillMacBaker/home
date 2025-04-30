@@ -1,8 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { ProjectPane } from './ProjectPane';
 import { projects } from './data/data';
-import { stagger, animate, motion, LayoutGroup } from 'motion/react';
+import { motion } from 'motion/react';
 
 
 const ProjectItemParentDiv = styled(motion.div)`
@@ -11,8 +10,18 @@ const ProjectItemParentDiv = styled(motion.div)`
     max-width:  90%;
     margin-top: 2rem;
     justify-self: center;
-    background-color: rgba(251, 251, 243, 0.481);
     padding: 3rem;
+    margin: 1rem;
+    max-width: 100%;
+    font-family: monospace;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border: 4px solid #000;
+    box-shadow: 5px 5px 0 #000, 4px 4px 0 #E8793F;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 `
 
 const ProjectItemDiv = styled(motion.div)<{boxShadowInput: string}>`
@@ -80,7 +89,9 @@ const ProjectItemInfoDiv = styled(motion.div)<{coverColor: string}>`
     text-align: center;
 `
 const ProjectItemImage = styled(motion.img)`
-     size: auto;
+     width: 100%;
+    height: 100%;
+    object-fit: contain;
 `
 const StyledH2 = styled.h2`
     font-size: 28px;

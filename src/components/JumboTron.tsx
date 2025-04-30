@@ -1,6 +1,4 @@
-import * as React from 'react';
 import styled from 'styled-components';
-import portrait from '../assets/images/definitelyMe.jpeg'
 import { motion } from 'motion/react';
 
 
@@ -74,25 +72,68 @@ const JumboTronBottomSection = styled(motion.div)`
     color: var(--purple);
 `
 
-const StyledButton = styled.button<{$color?: string}>`
-    background-color: ${({$color}) => $color || "purple"};
-    cursor: pointer;
-    border-radius: 0%;
+// const StyledButton = styled.button<{$color?: string}>`
+//     background-color: ${({$color}) => $color || "purple"};
+//     cursor: pointer;
+//     border-radius: 0%;
+//     text-align: center;
+//     width: 50px;
+//     height: 50px;
+// `
+
+const StyledTextDiv = styled(motion.div)`
+color: red;
     text-align: center;
-    width: 50px;
-    height: 50px;
+    position: relative;
+    
+    margin: 1rem;
+    width: 300px;
+    max-width: 100%;
+    font-family: monospace;
+    padding: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border: 4px solid #000;
+    box-shadow: 5px 5px 0 #000, 10px 10px 0 #E8793F;
+    display: flexbox;
+    background-color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    /* PLACEHOLDER STYLING, NEED TO GET CREATIVE WITH THIS */
+    h1{
+        font-size: 50px;
+        text-shadow: 2px 2px 0 #E8793F, 2px 2px 0 white;
+    }
+
+    h2{
+        font-size: 28px;
+    }
+
+    p{
+        font-size: 18px;
+    }
+
 `
 
-interface IJumbotron{
-    name?: string
-    age?: number
-    job?: string
-    buttonColor?: string
-    colorScheme?: boolean
-}
+const Header = styled.h2`
+    color: red;
+    text-align: center;
+    position: relative;
+    margin: 1rem;
+    max-width: 100%;
+    font-family: monospace;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border: 4px solid #000;
+    box-shadow: 5px 5px 0 #000, 10px 10px 0 #E8793F;
+`
 
-
-export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
+export const JumboTron = () => {
     return(
         <StyledSection className="jumboTronContainer">
             <JumboTronTopSection className="jumboTronTopSection">
@@ -100,14 +141,16 @@ export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
                     <motion.article className="pageHeader"
                     initial={{opacity: "0%"}}
                     animate={{opacity:"100%"}}>
-                        <div>
+                        <StyledTextDiv>
                             <h1>
-                                Hi! I'm {name}.
+                                Hi! I'm Will!
                             </h1>
                             <h2>
                                 I like to make React Projects and other fun things!
                             </h2>
-                        </div> 
+                            <p>I've worked as a front-end developer for a year, working with React & TypeScript</p>
+                            <p>Cypress Testing, Git, Gitlab</p>
+                        </StyledTextDiv> 
                     </motion.article>
                 </JumboTronContentDiv>
                 <PortraitContainer className="portraitContainer"
@@ -123,18 +166,7 @@ export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
                 </PortraitContainer>  
             </JumboTronTopSection>
             <JumboTronBottomSection>
-                {/* STYLE THIS TO BE LARGE, HEADER ABOVE PROJECT SECTION! */}
-                <p>Check out some of my technical challenge work below:</p>
-                <div>
-                    {/* <ul className="pageHeaderSubHighlights">
-                        <li>
-                            I'm currently working on my JavaScript and React Library skills
-                        </li>
-                        <li>
-                            I'm also working on my styling and page design abilities!
-                        </li>
-                    </ul> */}
-                </div>
+                <Header>Check out some of my technical challenge work below:</Header>
             </JumboTronBottomSection>
         </StyledSection>
     )
