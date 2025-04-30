@@ -10,9 +10,10 @@ const ProjectItemParentDiv = styled(motion.div)`
     max-width:  90%;
     margin-top: 2rem;
     justify-self: center;
+    justify-content: center;
     padding: 3rem;
     margin: 1rem;
-    max-width: 100%;
+    max-width: 75%;
     font-family: monospace;
     padding: 10px;
     font-size: 18px;
@@ -22,6 +23,7 @@ const ProjectItemParentDiv = styled(motion.div)`
     border: 4px solid #000;
     box-shadow: 5px 5px 0 #000, 4px 4px 0 #E8793F;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 `
 
 const ProjectItemDiv = styled(motion.div)<{boxShadowInput: string}>`
@@ -55,13 +57,13 @@ const ProjectItemDiv = styled(motion.div)<{boxShadowInput: string}>`
 `
 
 const ProjectItemImageDiv = styled(motion.div)`
-    width: 100%;
+    width: auto;
     height: 100%;
     align-items: center;
     top: 0;
     left: 0;
     z-index: 0;
-    max-width: inherit;
+    //max-width: inherit;
 `
 
 const ProjectItemInfoDiv = styled(motion.div)<{coverColor: string}>`
@@ -89,9 +91,9 @@ const ProjectItemInfoDiv = styled(motion.div)<{coverColor: string}>`
     text-align: center;
 `
 const ProjectItemImage = styled(motion.img)`
-     width: 100%;
+    width: 100%;
     height: 100%;
-    object-fit: contain;
+    //object-fit: contain;
 `
 const StyledH2 = styled.h2`
     font-size: 28px;
@@ -116,6 +118,7 @@ export const ProjectSection = () => {
             <div className='prePaneHeader'>
             </div>
             <ProjectItemParentDiv className='paneContainer'
+                
                 // Animations for layout of interior elements can go here.
                 >
                 {projects.map((project) => (

@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import { motion } from 'motion/react';
 
+// TODO
+/* 
+Work on creating some animated orchestration, so this jumbotron will proc first, with box shadows loading in, THEN
+content for main textbox, then image, THEN technical challenge header, ONCE you scroll down.
 
+
+*/
 
 const StyledSection = styled(motion.section)`
     display: flex;
@@ -57,10 +63,7 @@ const StyledImageContainer = styled(motion.img)`
 const JumboTronTopSection = styled(motion.div)`
     display: inline-flex;
     flex-direction: row;
-    // UPDATE BACKGROUND IMAGE REFERENCE, MAYBE CHANGE TO PATTERN INSTEAD
-
-    //background-color: var(--purple);
-    color: var(--yellow);
+    
 `
 const JumboTronContentDiv = styled(motion.div)`
     display: flex;
@@ -72,25 +75,15 @@ const JumboTronBottomSection = styled(motion.div)`
     color: var(--purple);
 `
 
-// const StyledButton = styled.button<{$color?: string}>`
-//     background-color: ${({$color}) => $color || "purple"};
-//     cursor: pointer;
-//     border-radius: 0%;
-//     text-align: center;
-//     width: 50px;
-//     height: 50px;
-// `
-
 const StyledTextDiv = styled(motion.div)`
 color: red;
     text-align: center;
     position: relative;
-    
     margin: 1rem;
-    width: 300px;
+    width: 400px;
     max-width: 100%;
     font-family: monospace;
-    padding: 25px;
+    padding: 20px;
     font-size: 18px;
     font-weight: bold;
     color: #000;
@@ -104,11 +97,13 @@ color: red;
     /* PLACEHOLDER STYLING, NEED TO GET CREATIVE WITH THIS */
     h1{
         font-size: 50px;
-        text-shadow: 2px 2px 0 #E8793F, 2px 2px 0 white;
+        font-weight: bolder;
+        //text-shadow: 2px 2px 0 #E8793F, 2px 2px 0 white;
     }
 
     h2{
         font-size: 28px;
+        font-weight: bold;
     }
 
     p{
@@ -136,11 +131,12 @@ const Header = styled.h2`
 export const JumboTron = () => {
     return(
         <StyledSection className="jumboTronContainer">
-            <JumboTronTopSection className="jumboTronTopSection">
+            <JumboTronTopSection className="jumboTronTopSection"
+            initial={{opacity: "0%"}}
+            animate={{opacity:"100%"}}>
                 <JumboTronContentDiv>
                     <motion.article className="pageHeader"
-                    initial={{opacity: "0%"}}
-                    animate={{opacity:"100%"}}>
+                    >
                         <StyledTextDiv>
                             <h1>
                                 Hi! I'm Will!
@@ -153,20 +149,20 @@ export const JumboTron = () => {
                         </StyledTextDiv> 
                     </motion.article>
                 </JumboTronContentDiv>
-                <PortraitContainer className="portraitContainer"
-                initial={{opacity: "0%"}}
-                animate={{opacity:"100%"}}>
+                <PortraitContainer>
                     {/* Todo: to replace this figure and img with a generic image component, that
                         can take parameters to define basic styling, like width, height...
                         Currently handled in bootleg way via standard index.css
                         */}
                     <PortraitContainerFigure>
-                        <StyledImageContainer className="portrait" src="./src/assets/images/definitelyMe.jpeg"></StyledImageContainer>
+                        <StyledImageContainer src="./src/assets/images/definitelyMe.jpeg"></StyledImageContainer>
                     </PortraitContainerFigure>
                 </PortraitContainer>  
             </JumboTronTopSection>
-            <JumboTronBottomSection>
-                <Header>Check out some of my technical challenge work below:</Header>
+            <JumboTronBottomSection
+            initial={{opacity: "0%"}}
+            animate={{opacity:"100%"}}>
+            <Header>Check out some of my technical challenge work below:</Header>
             </JumboTronBottomSection>
         </StyledSection>
     )
