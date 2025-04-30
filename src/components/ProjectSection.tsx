@@ -1,4 +1,4 @@
-import * as React from 'react';
+//import * as React from 'react';
 import styled from 'styled-components';
 import { projects } from './data/data';
 import { motion } from 'motion/react';
