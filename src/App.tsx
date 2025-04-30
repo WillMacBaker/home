@@ -1,5 +1,6 @@
 //import { useCallback, useEffect, useState } from "react"
-//import styled from 'styled-components'
+import styled from 'styled-components'
+import { motion } from 'motion/react';
 
 
 // Component imports
@@ -8,28 +9,32 @@ import {JumboTron} from "./components/JumboTron"
 //import NavigationBar from "./components/NavigationBar"
 import { ProjectSection } from "./components/ProjectSection"
 //import Skills from "./components/Skills"
-import Footer from "./components/Footer"
 
 // Utility imports
 import "./index.css"
 
 // Page imports 
 
+
+const AppContainer = styled(motion.div)`
+
+`
+
 export default function App() { 
   return( 
         <main >
-          <div className="mainPageContent">
+          <AppContainer>
             {/* Nav bar will sit at top of page*/}
             <div className="navbar">
               {/* <NavigationBar /> */}
             </div>
             <div>
-            <JumboTron name="Will" age={27} job="developer?" buttonColor="red"/>
+            <JumboTron name="Will"/>
             <ProjectSection />
             {/* <Skills />
             <Contact /> */}
             </div>
-          </div>
+          </AppContainer>
           <div className="footer">
             {/* <Footer />  */}
           </div>

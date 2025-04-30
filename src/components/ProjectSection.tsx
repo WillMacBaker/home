@@ -11,18 +11,28 @@ const ProjectItemParentDiv = styled(motion.div)`
     max-width:  90%;
     margin-top: 2rem;
     justify-self: center;
-    //background-color: beige;
+    background-color: rgba(251, 251, 243, 0.481);
+    padding: 3rem;
 `
 
 const ProjectItemDiv = styled(motion.div)<{boxShadowInput: string}>`
     cursor: pointer;
-    width: inherit;
     position: relative;
+    justify-self: center;
+    min-width: 400px;
+    min-height: 300px;
     max-width: 400px;
     max-height: 500px;
-    max-width: auto;
     margin: 1rem;
-    background-color: white;
+    padding: 1rem;
+    background-color: ${({boxShadowInput}) => {
+        if (boxShadowInput) {
+            return boxShadowInput
+        } else {
+            return `white`;
+        }
+    }
+};
     // add function here to set box-shadow to a colour added to data file!
     box-shadow: 5px 5px 0 #000, 10px 10px 0 ${({boxShadowInput}) => {
         // Bit verbose, but works
@@ -38,19 +48,20 @@ const ProjectItemDiv = styled(motion.div)<{boxShadowInput: string}>`
 const ProjectItemImageDiv = styled(motion.div)`
     width: 100%;
     height: 100%;
-    //position: absolute;
+    align-items: center;
     top: 0;
     left: 0;
     z-index: 0;
     max-width: inherit;
 `
 
-const ProjectItemInfoDiv = styled(motion.div)`
+const ProjectItemInfoDiv = styled(motion.div)<{coverColor: string}>`
     display: block;
-    //flex-direction: column;
     opacity: 0;
     max-width: inherit;
     max-height: inherit;
+    max-width: 100%;
+    max-height: 100%;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -58,7 +69,14 @@ const ProjectItemInfoDiv = styled(motion.div)`
     left: 0;
     z-index: 9;
     color: white;
-    background-color: ORANGE;
+    background-color: ${({coverColor}) => {
+        if (coverColor) {
+            return coverColor
+        } else {
+            return `white`;
+        }
+    }
+};
     text-align: center;
 `
 const ProjectItemImage = styled(motion.img)`
@@ -94,7 +112,6 @@ export const ProjectSection = () => {
                     layout
                     transition={{type: "linear"}}
 
-
                     href={project.link}
                     key={project.image}
                     className='projectPane'>
@@ -125,6 +142,7 @@ export const ProjectSection = () => {
                                     opacity: 1,
                                     transition: {duration : 0.1}
                                 }}
+                                coverColor={project.boxShadow}
                             >
                                 <StyledH2>
                                     {project.title}

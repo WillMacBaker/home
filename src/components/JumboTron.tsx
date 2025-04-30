@@ -13,7 +13,7 @@ const StyledSection = styled(motion.section)`
 `
 
 const PortraitContainer = styled(motion.div)`
-    background-color: red;
+
 `
 
 const PortraitContainerFigure = styled(motion.figure)`
@@ -34,7 +34,6 @@ const PortraitContainerFigure = styled(motion.figure)`
     display: flex;
     width: 40vh;
     padding: 20px;
-    background-color: yellow;
 `
 
 const StyledImageContainer = styled(motion.img)`
@@ -53,7 +52,7 @@ const StyledImageContainer = styled(motion.img)`
         max-height: 380px;
     }
     height: auto;
-    //width: 100%;
+    width: 100%;
     box-shadow: 5px 5px 0 #000, 10px 10px 0 #ee82ee;
 `
 
@@ -124,15 +123,17 @@ export const JumboTron = ({name, age, job, buttonColor}: IJumbotron) => {
                 </PortraitContainer>  
             </JumboTronTopSection>
             <JumboTronBottomSection>
+                {/* STYLE THIS TO BE LARGE, HEADER ABOVE PROJECT SECTION! */}
+                <p>Check out some of my technical challenge work below:</p>
                 <div>
-                    <ul className="pageHeaderSubHighlights">
+                    {/* <ul className="pageHeaderSubHighlights">
                         <li>
                             I'm currently working on my JavaScript and React Library skills
                         </li>
                         <li>
                             I'm also working on my styling and page design abilities!
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </JumboTronBottomSection>
         </StyledSection>
