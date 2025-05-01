@@ -10,9 +10,11 @@
 
     // Todo: Link to a JS page, that itself goes to all your older, basic projects + Freecodecamp?
     // Todo: Add a size flag? For benefit of manual adjustment?
+
+    // https://gsap.com/community/forums/topic/25552-animate-flex-intem-resize-on-flex-direction-change/
+    // REFER TO THIS FOR SMOOTH ANIMATION OF PANEL FIELD DATA ENTRIES
 */
 
-const BASE_URL = import.meta.env.BASE_URL;
 export const projects  = [
     {
         title: "My FreeCodeCamp Portfolio",
