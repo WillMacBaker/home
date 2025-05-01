@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'motion/react';
+const BASE_URL = import.meta.env.BASE_URL;
 
 // TODO
 /* 
@@ -78,7 +79,6 @@ const JumboTronBottomSection = styled(motion.div)`
 `
 
 const StyledTextDiv = styled(motion.div)`
-color: red;
     text-align: center;
     position: relative;
     margin: 1rem;
@@ -94,8 +94,7 @@ color: red;
     box-shadow: 5px 5px 0 #000, 10px 10px 0 #E8793F;
     display: flexbox;
     background-color: aliceblue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+    font-family: Arial, Helvetica, sans-serif;
     /* PLACEHOLDER STYLING, NEED TO GET CREATIVE WITH THIS */
     h1{
         font-size: 50px;
@@ -157,7 +156,7 @@ export const JumboTron = () => {
                         Currently handled in bootleg way via standard index.css
                         */}
                     <PortraitContainerFigure>
-                        <StyledImageContainer src="./src/assets/images/definitelyMe.jpeg"></StyledImageContainer>
+                        <StyledImageContainer src={BASE_URL + "/assets/images/definitelyMe.jpeg"}></StyledImageContainer>
                     </PortraitContainerFigure>
                 </PortraitContainer>  
             </JumboTronTopSection>
