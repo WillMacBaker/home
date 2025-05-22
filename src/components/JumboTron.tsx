@@ -150,15 +150,15 @@ export const JumboTron = () => {
                         </StyledTextDiv> 
                     </motion.article>
                 </JumboTronContentDiv>
-                <PortraitContainer>
+                {/* <PortraitContainer>
                     {/* Todo: to replace this figure and img with a generic image component, that
                         can take parameters to define basic styling, like width, height...
                         Currently handled in bootleg way via standard index.css
-                        */}
+                        }
                     <PortraitContainerFigure>
                         <StyledImageContainer src={BASE_URL + "/assets/images/definitelyMe.jpeg"}></StyledImageContainer>
                     </PortraitContainerFigure>
-                </PortraitContainer>  
+                </PortraitContainer>   */}
             </JumboTronTopSection>
             <JumboTronBottomSection
             initial={{opacity: "0%"}}
