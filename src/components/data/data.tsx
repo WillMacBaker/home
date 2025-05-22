@@ -17,12 +17,12 @@
 
 export const projects  = [
     {
-        title: "My FreeCodeCamp Portfolio",
-        subtitle: "What have I submitted to the site recently?",
+        title: "My Codecademy work",
+        subtitle: "What have I been learning recently?",
         description: 
-            "See how I'm getting along on FreeCodeCamp",
-        image: "/assets/images/FreeCodeCamp_logo.png",
-        link: "https://www.freecodecamp.org/willmacbaker",
+            "See how I'm getting along on Codecademy",
+        image: "/assets/images/codecademy.jpg",
+        link: "https://www.codecademy.com/profiles/WillMacBaker",
         boxShadow: 'purple'
     },
     {
