@@ -105,7 +105,7 @@ Error generating stack: `+d.message+`
 `,RC=()=>le.jsxs(xC,{className:"jumboTronContainer",children:[le.jsx(PC,{className:"jumboTronTopSection",initial:{opacity:"0%"},animate:{opacity:"100%"},children:le.jsx(CC,{children:le.jsx(mt.article,{className:"pageHeader",children:le.jsxs(kC,{children:[le.jsx("h1",{children:"Hi! I'm Will!"}),le.jsx("h2",{children:"I like to make React Projects and other fun things!"}),le.jsx("p",{children:"I've worked as a front-end developer for a year, working with React & TypeScript"}),le.jsx("p",{children:"Cypress Testing, Git, Gitlab"})]})})})}),le.jsx(EC,{initial:{opacity:"0%"},animate:{opacity:"100%"},children:le.jsx(TC,{children:"Check out some of my technical challenge work below:"})})]}),AC=[{title:"Gif Search Tool",subtitle:"Search for a GIF, any GIF!",description:"Hooked up to the GIPHY API, this basic page application can query GIPHY with user-chosen search queries",image:"/assets/images/giphyProjectImage.png",link:"https://willmacbaker.github.io/giphy-technical-challenge/",boxShadow:"#4a90e2"},{title:"Currency Converter Tool",subtitle:"Convert a currency!",description:"Using a currency API worked into a TypeScript + React frontend, convert currencies! Done to meet a technical challenge.",image:"/assets/images/currencyConverter.png",link:"https://willmacbaker.github.io/currency-converter-challenge/",boxShadow:"rgb(255, 165, 0)"}],DC="/home",LC=Xe(mt.div)`
     display: flex;
     flex-wrap: wrap;
-    max-width:  90%;
+    max-width:  50%;
     margin-top: 4rem;
     margin-left: auto;
     margin-right: auto;
@@ -163,11 +163,15 @@ Error generating stack: `+d.message+`
     //object-fit: contain;
 `,IC=Xe.h2`
     font-size: 28px;
+    max-width: inherit;
 `,FC=Xe.h3`
     font-size: 20px;
+    max-width: inherit;
 `,OC=Xe.p`
     font-size: 18px;
     font-style: italic;
+    max-width: auto;
+    padding: 1rem;
 `,jC=Xe(mt.section)`
     justify-content: center;
     align-self: center;
