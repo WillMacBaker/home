@@ -146,7 +146,7 @@ export const JumboTron = () => {
                                 I like to make React Projects and other fun things!
                             </h2>
                             <p>I've worked as a front-end developer for a year, working with React & TypeScript</p>
-                            <p>Cypress Testing, Git, Gitlab</p>
+                            {/* <p>Cypress Testing, Git, Gitlab</p> */}
                         </StyledTextDiv> 
                     </motion.article>
                 </JumboTronContentDiv>
