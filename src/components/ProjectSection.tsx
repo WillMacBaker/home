@@ -10,7 +10,7 @@ const BASE_URL = import.meta.env.BASE_URL;
 const ProjectItemParentDiv = styled(motion.div)`
     display: flex;
     flex-wrap: wrap;
-    max-width:  90%;
+    max-width:  50%;
     margin-top: 4rem;
     margin-left: auto;
     margin-right: auto;
@@ -98,15 +98,19 @@ const ProjectItemImage = styled(motion.img)`
 `
 const StyledH2 = styled.h2`
     font-size: 28px;
+    max-width: inherit;
 `
 
 const StyledH3 = styled.h3`
     font-size: 20px;
+    max-width: inherit;
 `
 
 const StyledText = styled.p`
     font-size: 18px;
     font-style: italic;
+    max-width: auto;
+    padding: 1rem;
 `
 
 const StyledSection = styled(motion.section)`
