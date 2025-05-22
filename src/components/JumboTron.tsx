@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'motion/react';
-const BASE_URL = import.meta.env.BASE_URL;
+//const BASE_URL = import.meta.env.BASE_URL;
 
 // TODO
 /* 
@@ -17,49 +17,49 @@ const StyledSection = styled(motion.section)`
     margin: auto;
 `
 
-const PortraitContainer = styled(motion.div)`
+// const PortraitContainer = styled(motion.div)`
 
-`
+// `
 
-const PortraitContainerFigure = styled(motion.figure)`
-    @media (min-width:768px) {
-        max-width: 240px;
-        max-height: 240px;
-    }
+// const PortraitContainerFigure = styled(motion.figure)`
+//     @media (min-width:768px) {
+//         max-width: 240px;
+//         max-height: 240px;
+//     }
 
-    @media (min-width:992px) {
-        max-width: 314px;
-        max-height: 314px;
-    }
+//     @media (min-width:992px) {
+//         max-width: 314px;
+//         max-height: 314px;
+//     }
 
-    @media (min-width:1200px) {
-        max-width: 380px;
-        max-height: 380px;
-    }
-    display: flex;
-    width: 40vh;
-    padding: 20px;
-`
+//     @media (min-width:1200px) {
+//         max-width: 380px;
+//         max-height: 380px;
+//     }
+//     display: flex;
+//     width: 40vh;
+//     padding: 20px;
+// `
 
-const StyledImageContainer = styled(motion.img)`
-    @media (min-width:768px) {
-        max-width: 240px;
-        max-height: 240px;
-    }
+// const StyledImageContainer = styled(motion.img)`
+//     @media (min-width:768px) {
+//         max-width: 240px;
+//         max-height: 240px;
+//     }
 
-    @media (min-width:992px) {
-        max-width: 314px;
-        max-height: 314px;
-    }
+//     @media (min-width:992px) {
+//         max-width: 314px;
+//         max-height: 314px;
+//     }
 
-    @media (min-width:1200px) {
-        max-width: 380px;
-        max-height: 380px;
-    }
-    height: auto;
-    width: 100%;
-    box-shadow: 5px 5px 0 #000, 10px 10px 0 #ee82ee;
-`
+//     @media (min-width:1200px) {
+//         max-width: 380px;
+//         max-height: 380px;
+//     }
+//     height: auto;
+//     width: 100%;
+//     box-shadow: 5px 5px 0 #000, 10px 10px 0 #ee82ee;
+// `
 
 const JumboTronTopSection = styled(motion.div)`
     display: inline-flex;
