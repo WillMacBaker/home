@@ -16,15 +16,15 @@
 */
 
 export const projects  = [
-    {
-        title: "My Codecademy work",
-        subtitle: "What have I been learning recently?",
-        description: 
-            "See how I'm getting along on Codecademy",
-        image: "/assets/images/codecademy.jpg",
-        link: "https://www.codecademy.com/profiles/WillMacBaker",
-        boxShadow: 'purple'
-    },
+    // {
+    //     title: "My Codecademy work",
+    //     subtitle: "What have I been learning recently?",
+    //     description: 
+    //         "See how I'm getting along on Codecademy",
+    //     image: "/assets/images/codecademy.jpg",
+    //     link: "https://www.codecademy.com/profiles/WillMacBaker",
+    //     boxShadow: 'purple'
+    // },
     {
         title: "Gif Search Tool",
         subtitle: "Search for a GIF, any GIF!",
