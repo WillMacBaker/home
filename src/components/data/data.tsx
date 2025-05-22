@@ -15,15 +15,15 @@
 */
 
 export const projects  = [
-    {
-        title: "My FreeCodeCamp Portfolio",
-        subtitle: "What have I submitted to the site recently?",
-        description: 
-            "See how I'm getting along on FreeCodeCamp",
-        image: "src/assets/images/FreeCodeCamp_logo.png",
-        link: "https://www.freecodecamp.org/willmacbaker",
-        boxShadow: 'purple'
-    },
+    // {
+    //     title: "My FreeCodeCamp Portfolio",
+    //     subtitle: "What have I submitted to the site recently?",
+    //     description: 
+    //         "See how I'm getting along on FreeCodeCamp",
+    //     image: "src/assets/images/FreeCodeCamp_logo.png",
+    //     link: "https://www.freecodecamp.org/willmacbaker",
+    //     boxShadow: 'purple'
+    // },
     {
         title: "Gif Search Tool",
         subtitle: "Search for a GIF, any GIF!",
