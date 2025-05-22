@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { projects } from './data/data';
 import { motion } from 'motion/react';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
+
 
 const ProjectItemParentDiv = styled(motion.div)`
     display: flex;
@@ -111,7 +114,6 @@ const StyledSection = styled(motion.section)`
     align-self: center;
 `
 
-
 /* For now, can manually add in panes with content and links, better future approach would be an array of objects,
     with each object containing a link, image(?) and text to show*/
 
@@ -152,7 +154,7 @@ export const ProjectSection = () => {
                                 <ProjectItemImage
                                 alt="gallery"
                                 className="paneImage"
-                                src={project.image}
+                                src={BASE_URL + project.image}
                                 />
                             </ProjectItemImageDiv>
                             <ProjectItemInfoDiv
