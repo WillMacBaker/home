@@ -99,11 +99,13 @@ const ProjectItemImage = styled(motion.img)`
 const StyledH2 = styled.h2`
     font-size: 28px;
     max-width: inherit;
+    // Add conditional code here to provide dark text based upon brightness of background.
 `
 
 const StyledH3 = styled.h3`
     font-size: 20px;
     max-width: inherit;
+    // Add conditional code here to provide dark text based upon brightness of background.
 `
 
 const StyledText = styled.p`
@@ -111,6 +113,8 @@ const StyledText = styled.p`
     font-style: italic;
     max-width: auto;
     padding: 1rem;
+    // Add conditional code here to provide dark text based upon brightness of background.
+    //color: black;
 `
 
 const StyledSection = styled(motion.section)`

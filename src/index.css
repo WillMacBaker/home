@@ -1,17 +1,40 @@
 body {
-  margin: 0;
- min-width: 400px;
+  /* margin: 0; */
+ /* min-width: 400px; */
   /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace; */
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+  /* -webkit-font-smoothing: antialiased; */
+  /* -moz-osx-font-smoothing: grayscale; */
 
   background-image: repeating-linear-gradient(135deg, #d8f7fb,#d8f7fb 20vw,#ffffff 20vw,#ffffff 40vw,#f2ebc6 40vw,#f2ebc6 60vw,#ffffff 60vw,#ffffff 80vw,#cbf9df 80vw,#cbf9df 100vw,#ffffff 100vw,#ffffff 120vw);
   /* If I desire pain, can update this to an SVG that animates as you go down page? Consider Motion library for this purpose! */
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+
+/* 
+
+In here, you can change the css properties for all elements on a site! This is where I'll be asking you to add styling on a 'global' level
+
+To add a css property for a named html element, you merely need to add the name of the element, so paragraph tags <p></p> can be added with::after
+
+p {
+  font-size: 30px;
+
 }
+
+But what if you only want to change the styling of some *specific* paragraph elements, and not EVERY paragraph element on a site?
+
+In this React project, it'll look a bit different to a 'raw' html + css + JavaScript site, but still builds upon the basics!
+
+*/
+
+/* p {
+  font-size: larger;
+  color: yellow;
+} */
