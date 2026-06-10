@@ -138,7 +138,6 @@ export const ProjectSection = () => {
                 {projects.map((project) => (
                     <motion.a
                     layout
-                    transition={{type: "linear"}}
 
                     href={project.link}
                     key={project.image}
